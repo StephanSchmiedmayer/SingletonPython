@@ -23,10 +23,12 @@ def test_singleton_general_behavior():
 
     instance1 = Test()
     assert instance1.variable == 0
-    instance1.inc()
-    assert instance1.variable == 1
     instance2 = Test()
+    instance1.inc()
+    instance3 = Test()
+    assert instance1.variable == 1
     assert instance2.variable == 1
+    assert instance3.variable == 1
 
 
 def test_singleton_init():
@@ -114,3 +116,37 @@ def test_singleton_wrapper_transparency():
     Test_Singleton = singleton(Test)
 
     assert issubclass(Test_Singleton, Test)
+
+
+def test_singleton_class_variable():
+    """Test the Singleton does not change class variable's behavior."""
+
+    @singleton
+    class Test:
+        test = 1
+
+    instance1 = Test()
+    assert instance1.test == 1
+    instance2 = Test()
+    instance1.test = 2
+    assert instance2.test == 2
+    assert Test().test == 2
+
+
+def test_singleton_dir():
+    """Test that the singleton does not remove any elements from `dir`."""
+
+    @singleton
+    class Test:
+        def __init__(self):
+            self.variable1 = 1
+
+    class TestReference:
+        def __init__(self):
+            self.variable1 = 1
+
+    test_dir = dir(Test())
+    assert all(
+        reference_dir_element in test_dir
+        for reference_dir_element in dir(TestReference())
+    )
