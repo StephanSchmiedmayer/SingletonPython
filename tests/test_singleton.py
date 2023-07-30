@@ -1,4 +1,4 @@
-"""Test agatha.util.Singleton."""
+"""Test singleton.singleton."""
 
 from unittest.mock import Mock
 
