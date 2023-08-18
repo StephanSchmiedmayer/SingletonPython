@@ -6,15 +6,14 @@ A clean, transparent and easy to use python singleton wrapper.
 
 ## Installation
 
-TODO: once published:
-`pip install singleton2`
+`pip install better-singleton`
 
 ## Usage
 
-Singleton definition:$$
+Singleton definition:
 
 ```python
-from singleton import singleton
+from better_singleton import singleton
 
 @singleton
 class Counter:
@@ -49,12 +48,22 @@ Not thread safe during first initialization.
 
 ## Contributing
 
+### Publish
+
+1. Bump version in [pyproject.toml](pyproject.toml)
+2. `poetry update`
+3. `poetry build`
+4. `poetry publish`
+
 ## License
 
-## Contact
+See [License.md](LICENSE.md).
 
-Stephan Schmiedmayer
+## Contributors
+
+[Stephan Schmiedmayer](https://github.com/stephanschmiedmayer)
 
 ## Acknowledgments
 
-- TODO: APP lead & team members
+Team Incentive Mechanism App Cluster of "Advanced Python Programming Spring 2022"
+Nour Bouzid, Yanjie Li, Stephan Schmiedmayer and Leonhard Zirus under supervision of Valentin Zieglmeier
