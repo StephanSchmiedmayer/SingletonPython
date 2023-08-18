@@ -1,4 +1,4 @@
-# WIP Singleton
+# Singleton
 
 ## About the project
 
