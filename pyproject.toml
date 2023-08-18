@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "better-singleton"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = ["Stephan Schmiedmayer <56692976+StephanSchmiedmayer@users.noreply.github.com>"]
 readme = "README.md"
