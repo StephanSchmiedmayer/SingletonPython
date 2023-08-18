@@ -11,7 +11,7 @@ TODO: once published:
 
 ## Usage
 
-Singleton definition:
+Singleton definition:$$
 
 ```python
 from singleton import singleton
