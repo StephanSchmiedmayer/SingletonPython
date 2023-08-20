@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "better-singleton"
-version = "1.0.0"
-description = ""
+version = "1.0.1"
+description = "A clean, transparent and easy to use python singleton wrapper."
 authors = ["Stephan Schmiedmayer <56692976+StephanSchmiedmayer@users.noreply.github.com>"]
 readme = "README.md"
 repository = "https://github.com/StephanSchmiedmayer/SingletonPython"
