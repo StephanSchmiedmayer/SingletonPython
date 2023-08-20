@@ -4,7 +4,7 @@ from unittest.mock import Mock
 
 import pytest
 
-from singleton import singleton
+from better_singleton import singleton
 
 
 def test_singleton_general_behavior():
