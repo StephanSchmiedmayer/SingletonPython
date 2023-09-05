@@ -150,3 +150,27 @@ def test_singleton_dir():
         reference_dir_element in test_dir
         for reference_dir_element in dir(TestReference())
     )
+
+
+@singleton
+class SingletonTest:
+    """Singleton class for testing in test_singleton_import"""
+
+    def __init__(self):
+        self.variable = 0
+
+    def inc(self):
+        """Increment `variable`."""
+        self.variable += 1
+
+
+@singleton
+class SingletonTest2:
+    """Singleton class for testing in test_singleton_import"""
+
+    def __init__(self):
+        self.variable = 0
+
+    def inc(self):
+        """Increment `variable`."""
+        self.variable += 1
